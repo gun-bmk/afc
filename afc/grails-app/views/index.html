@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    
 
     <title>Starter Template for Bootstrap</title>
 
@@ -18,7 +18,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>
       (function() {
-        var matchAPI = "http://api-blink.herokuapp.com/v0.1/vehicles/showAll";
+        var matchAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
         $.getJSON( matchAPI, {
           tags: "mount rainier",
           tagmode: "any",
@@ -26,9 +26,16 @@
         })
           .done(function( data ) {
             console.log(data);
-            // $.each( data.items, function( i, item ) {
-              
-            // });
+              $.each( data.items, function( i, item ) {
+               
+
+               var rDiv = document.createElement('div');
+
+               rDiv.innerHTML = "Content "+i;
+               $("#match_list_container").append(rDiv);
+               //rDiv.innerHTML = "This is the Demo Third row Content.";
+                  
+              });
           });
       })();
     </script>
@@ -38,9 +45,10 @@
   <body>
 
     <div class="container">
-
+    <div id="match_list_container"></div>
     </div><!-- /.container -->
     <!-- Bootstrap core JavaScript
+
     ================================================== -->
     
   </body>
