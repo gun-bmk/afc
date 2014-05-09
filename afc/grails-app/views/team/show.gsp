@@ -23,6 +23,31 @@
 			</g:if>
 			<ol class="property-list team">
 			
+				<g:if test="${teamInstance?.name}">
+				<li class="fieldcontain">
+					<span id="name-label" class="property-label"><g:message code="team.name.label" default="Name" /></span>
+					
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${teamInstance}" field="name"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teamInstance?.logo}">
+				<li class="fieldcontain">
+					<span id="logo-label" class="property-label"><g:message code="team.logo.label" default="Logo" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teamInstance?.shortName}">
+				<li class="fieldcontain">
+					<span id="shortName-label" class="property-label"><g:message code="team.shortName.label" default="Short Name" /></span>
+					
+						<span class="property-value" aria-labelledby="shortName-label"><g:fieldValue bean="${teamInstance}" field="shortName"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:teamInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
