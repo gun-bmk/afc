@@ -16,35 +16,50 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script>
-      // (function() {
-      //   var matchAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-      //   $.getJSON( matchAPI, {
-      //     tags: "mount rainier",
-      //     tagmode: "any",
-      //     format: "json"
-      //   })
-      //     .done(function( data ) {
-      //       console.log(data);
-      //         $.each( data.items, function( i, item ) {
-               
-
-       //         var rDiv = document.createElement('div');
-
-      //          rDiv.innerHTML = "Content "+i;
-      //         $("#match_list_container").append(rDiv);
-      //          //rDiv.innerHTML = "This is the Demo Third row Content.";
-                  
-      //         });
-      //     });
-      // })();
-    </script>
+    
 
   </head>
-
   <body>
+    <div id="logo" style="background:white;height:140px;">
+      <h1 align="center" style="padding-top:50px;margin-top:0;">AFC</h1>
+    </div><!-- Logo -->
 
-    <div class="container">
+    <div class="container" style="margin-top:40px;">
+
+    <div id="match_detail_container" style="background-color:aqua;">
+        <br />
+        <table width="100%" border="0">
+        <tr>
+          <td colspan="6" align="center"><span id="location">Location</span><br /><br /></td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center" width="50%">
+            <img src="../../../../TMP/aTMP/Untitled-1.jpg" alt="" width="200" height="200" id="img3" />
+            <br /><span id="home_short_name">LVP</span>
+          </td>
+          <td colspan="3" align="center" width="50%">
+            <img src="../../../../TMP/aTMP/Untitled-1.jpg" alt="" width="200" height="200" id="img4" />
+            <br /><span id="away_short_name">MTD</span>
+            </td>
+        </tr>
+        <tr>
+          <td colspan="6" align="center"><br />2014-05-09 <br /><br /></td>
+        </tr>
+        <tr>
+          <td align="right"><img src="../../../../TMP/aTMP/Untitled-1.jpg" alt="" width="100" height="100" id="img1" /></td>
+          <td >Commentater Name</td>
+          <td align="right" ><img src="../../../../TMP/aTMP/Untitled-1.jpg" alt="" width="100" height="100" id="im2" /></td>
+          <td >Commentater Name</td>
+          <td align="right" ><img src="../../../../TMP/aTMP/Untitled-1.jpg" alt="" width="100" height="100" id="img3" /></td>
+          <td >Commentater Name</td>
+        </tr>
+        
+      </table>
+      <br />
+
+    </div><!-- match_detail_container -->
+
+    <br /><br />
     <div id="comment_container">
       
       <div class="comment_wrapper" style="margin-bottom:30px;">
@@ -72,7 +87,7 @@
         </table>
         <br />
         <div style="float:right;">
-          <button type="button" class="btn btn-default">More</button>
+          <button type="button" class="btn btn-default" id="btn_more">More</button>
         </div>
         <br />
        
@@ -80,7 +95,7 @@
 
       
 
-      <div class="comment_box_wrapper">
+      <div class="comment_box_wrapper" style="margin-bottom:100px;">
         <textarea class="form-control" id="textarea" rows="6" placeholder="Comment"></textarea>
       <br />
       <form class="form-inline" role="form">
@@ -96,7 +111,7 @@
     </div><!-- comment_container -->
     </div><!-- /.container -->
     <!-- Bootstrap core JavaScript
-
+    
     ================================================== -->
     
   </body>
