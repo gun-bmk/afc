@@ -7,7 +7,7 @@ class Comment {
 	String comment
 	String authorName
 	LocalDateTime timeStamp
-	int like = 0
+	int likeCount = 0
 	boolean topComment = false
 	
 	static belongsTo = [match :Match]
