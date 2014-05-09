@@ -6,7 +6,7 @@ class Commentator {
 	String email
 	byte[] image
 	
-	static hasMany = [matchs: Match]
+	static hasMany = [matchs: MatchCommentator]
 	
     static	mapping = {
     }

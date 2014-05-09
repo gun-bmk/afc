@@ -9,7 +9,7 @@ class Match {
 	
 	static belongsTo = [home: Team, away: Team]
 	
-	static hasMany = [comments: Comment, commentators: Commentator]
+	static hasMany = [comments: Comment, commentators: MatchCommentator]
 	
     static	mapping = {
     }
