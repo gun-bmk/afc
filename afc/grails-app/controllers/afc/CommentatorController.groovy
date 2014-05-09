@@ -91,6 +91,38 @@ class CommentatorController {
             '*'{ render status: NO_CONTENT }
         }
     }
+	
+	def loadImage(String domain, String name, Long id, Boolean thumbnail){
+//		def data = backendService.makePictureFile(domain, id, name)
+//		if(thumbnail){
+//			def img =  ImageIO.read(data)
+//			img = Scalr.resize(img, Scalr.Method.SPEED, Scalr.Mode.AUTOMATIC, 200, 200, null);
+//			
+//			Metadata metadata = ImageMetadataReader.readMetadata(data)
+//			def exifIFD0Directory = metadata.getDirectory(ExifIFD0Directory.class);
+//			if(exifIFD0Directory && exifIFD0Directory.containsTag(ExifIFD0Directory.TAG_ORIENTATION))
+//			{
+//				int exifOrientation = exifIFD0Directory.getInt(ExifIFD0Directory.TAG_ORIENTATION);
+//				def rotation
+//				switch(exifOrientation){
+//					case 3: rotation = Scalr.Rotation.CW_180; break
+//					case 6: rotation = Scalr.Rotation.CW_90; break
+//					case 8: rotation = Scalr.Rotation.CW_270; break
+//					
+//				}
+//				if(rotation){
+//					img = Scalr.rotate(img, rotation, Scalr.OP_ANTIALIAS)
+//				}
+//			}
+//			
+//			
+//			data = bi2bytes(img)
+//		}
+		
+		
+		
+		render(file: data, contentType: "image/jpeg")
+	}
 
     protected void notFound() {
         request.withFormat {

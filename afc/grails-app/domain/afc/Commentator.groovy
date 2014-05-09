@@ -13,7 +13,8 @@ class Commentator {
     
 	static	constraints = {
 		name blank: false
-		image nullable: true
+		email nullable: true
+		image nullable: true, size: 0..819200
     }
 	
 }
