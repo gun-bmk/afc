@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="authorName" title="${message(code: 'comment.authorName.label', default: 'Author Name')}" />
 					
-						<g:sortableColumn property="like" title="${message(code: 'comment.like.label', default: 'Like')}" />
+						<g:sortableColumn property="likeCount" title="${message(code: 'comment.likeCount.label', default: 'Like Count')}" />
 					
 						<th><g:message code="comment.match.label" default="Match" /></th>
 					
@@ -46,7 +46,7 @@
 					
 						<td>${fieldValue(bean: commentInstance, field: "authorName")}</td>
 					
-						<td>${fieldValue(bean: commentInstance, field: "like")}</td>
+						<td>${fieldValue(bean: commentInstance, field: "likeCount")}</td>
 					
 						<td>${fieldValue(bean: commentInstance, field: "match")}</td>
 					

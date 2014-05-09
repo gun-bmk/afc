@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'away', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'away', 'error')} ">
 	<label for="away">
 		<g:message code="match.away.label" default="Away" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="away" name="away.id" from="${afc.Team.list()}" optionKey="id" required="" value="${matchInstance?.away?.id}" class="many-to-one"/>
+	<g:select id="away" name="away.id" from="${afc.Team.list()}" optionKey="id" value="${matchInstance?.away?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 
@@ -47,30 +47,30 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'date', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'date', 'error')} ">
 	<label for="date">
 		<g:message code="match.date.label" default="Date" />
-		<span class="required-indicator">*</span>
+		
 	</label>
 	
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'home', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'home', 'error')} ">
 	<label for="home">
 		<g:message code="match.home.label" default="Home" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="home" name="home.id" from="${afc.Team.list()}" optionKey="id" required="" value="${matchInstance?.home?.id}" class="many-to-one"/>
+	<g:select id="home" name="home.id" from="${afc.Team.list()}" optionKey="id" value="${matchInstance?.home?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'place', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'place', 'error')} ">
 	<label for="place">
 		<g:message code="match.place.label" default="Place" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="place" required="" value="${matchInstance?.place}"/>
+	<g:textField name="place" value="${matchInstance?.place}"/>
 
 </div>
 

@@ -2,46 +2,46 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'comment', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'comment', 'error')} ">
 	<label for="comment">
 		<g:message code="comment.comment.label" default="Comment" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="comment" required="" value="${commentInstance?.comment}"/>
+	<g:textField name="comment" value="${commentInstance?.comment}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'authorName', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'authorName', 'error')} ">
 	<label for="authorName">
 		<g:message code="comment.authorName.label" default="Author Name" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="authorName" required="" value="${commentInstance?.authorName}"/>
+	<g:textField name="authorName" value="${commentInstance?.authorName}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'like', 'error')} required">
-	<label for="like">
-		<g:message code="comment.like.label" default="Like" />
+<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'likeCount', 'error')} required">
+	<label for="likeCount">
+		<g:message code="comment.likeCount.label" default="Like Count" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="like" type="number" value="${commentInstance.like}" required=""/>
+	<g:field name="likeCount" type="number" value="${commentInstance.likeCount}" required=""/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'match', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'match', 'error')} ">
 	<label for="match">
 		<g:message code="comment.match.label" default="Match" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="match" name="match.id" from="${afc.Match.list()}" optionKey="id" required="" value="${commentInstance?.match?.id}" class="many-to-one"/>
+	<g:select id="match" name="match.id" from="${afc.Match.list()}" optionKey="id" value="${commentInstance?.match?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'timeStamp', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'timeStamp', 'error')} ">
 	<label for="timeStamp">
 		<g:message code="comment.timeStamp.label" default="Time Stamp" />
-		<span class="required-indicator">*</span>
+		
 	</label>
 	
 

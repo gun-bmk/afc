@@ -41,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${commentInstance?.like}">
+				<g:if test="${commentInstance?.likeCount}">
 				<li class="fieldcontain">
-					<span id="like-label" class="property-label"><g:message code="comment.like.label" default="Like" /></span>
+					<span id="likeCount-label" class="property-label"><g:message code="comment.likeCount.label" default="Like Count" /></span>
 					
-						<span class="property-value" aria-labelledby="like-label"><g:fieldValue bean="${commentInstance}" field="like"/></span>
+						<span class="property-value" aria-labelledby="likeCount-label"><g:fieldValue bean="${commentInstance}" field="likeCount"/></span>
 					
 				</li>
 				</g:if>

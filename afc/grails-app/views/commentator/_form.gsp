@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: commentatorInstance, field: 'name', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: commentatorInstance, field: 'name', 'error')} ">
 	<label for="name">
 		<g:message code="commentator.name.label" default="Name" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="name" required="" value="${commentatorInstance?.name}"/>
+	<g:textField name="name" value="${commentatorInstance?.name}"/>
 
 </div>
 
@@ -20,12 +20,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: commentatorInstance, field: 'email', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: commentatorInstance, field: 'email', 'error')} ">
 	<label for="email">
 		<g:message code="commentator.email.label" default="Email" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="email" required="" value="${commentatorInstance?.email}"/>
+	<g:textField name="email" value="${commentatorInstance?.email}"/>
 
 </div>
 
