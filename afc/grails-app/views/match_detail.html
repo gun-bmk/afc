@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Match Detail</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      // (function() {
+      //   var matchAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      //   $.getJSON( matchAPI, {
+      //     tags: "mount rainier",
+      //     tagmode: "any",
+      //     format: "json"
+      //   })
+      //     .done(function( data ) {
+      //       console.log(data);
+      //         $.each( data.items, function( i, item ) {
+               
+
+       //         var rDiv = document.createElement('div');
+
+      //          rDiv.innerHTML = "Content "+i;
+      //         $("#match_list_container").append(rDiv);
+      //          //rDiv.innerHTML = "This is the Demo Third row Content.";
+                  
+      //         });
+      //     });
+      // })();
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    <div id="comment_container">
+      
+      <div class="comment_wrapper" style="margin-bottom:30px;">
+        
+        <table width="100%" border="0">
+          <tr>
+            <td colspan="2" >Peter</td>
+            <td width="68%" rowspan="2" bgcolor="#99FFFF">พากย์ไม่ดีเลย </td>
+          </tr>
+          <tr>
+            <td width="5%">like img</td>
+            <td width="10%">54</td>
+          </tr>
+        </table>
+        <br />
+        <table width="100%" border="0">
+          <tr>
+            <td colspan="2" >Peter</td>
+            <td width="68%" rowspan="2" bgcolor="#99FFFF">พากย์ไม่ดีเลย </td>
+          </tr>
+          <tr>
+            <td width="5%">like img</td>
+            <td width="10%">10</td>
+          </tr>
+        </table>
+        <br />
+        <div style="float:right;">
+          <button type="button" class="btn btn-default">More</button>
+        </div>
+        <br />
+       
+      </div><!-- comment_wrapper -->
+
+      
+
+      <div class="comment_box_wrapper">
+        <textarea class="form-control" id="textarea" rows="6" placeholder="Comment"></textarea>
+      <br />
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputEmail2">Name</label>
+          <input type="name" class="form-control" id="name" placeholder="Name">
+        </div>
+        <button type="submit" class="btn btn-default">Send</button>
+      </form>
+
+      </div><!-- comment_box_wrapper -->
+
+    </div><!-- comment_container -->
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+
+    ================================================== -->
+    
+  </body>
+</html>
