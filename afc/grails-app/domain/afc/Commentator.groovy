@@ -17,4 +17,9 @@ class Commentator {
 		image nullable: true, size: 0..819200
     }
 	
+	@Override	// Override toString for a nicer / more descriptive UI
+	public String toString() {
+		return "${name }";
+	}
+	
 }

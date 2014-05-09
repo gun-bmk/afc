@@ -15,6 +15,12 @@ class Match {
     }
     
 	static	constraints = {
+		home nullable: false
+		away nullable: false
     }
 	
+	@Override	// Override toString for a nicer / more descriptive UI
+	public String toString() {
+		return "${home} vs ${away}";
+	}
 }
