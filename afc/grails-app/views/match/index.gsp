@@ -24,11 +24,13 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="match.away.label" default="Away" /></th>
+						<th><g:message code="match.MatchName.label" default="Name" /></th>
 					
 						<g:sortableColumn property="date" title="${message(code: 'match.date.label', default: 'Date')}" />
 					
 						<th><g:message code="match.home.label" default="Home" /></th>
+						
+						<th><g:message code="match.away.label" default="Away" /></th>
 					
 						<g:sortableColumn property="place" title="${message(code: 'match.place.label', default: 'Place')}" />
 					
@@ -38,11 +40,13 @@
 				<g:each in="${matchInstanceList}" status="i" var="matchInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${matchInstance.id}">${fieldValue(bean: matchInstance, field: "away")}</g:link></td>
-					
+						<td><g:link action="show" id="${matchInstance.id}">${matchInstance}</g:link></td>
+						
 						<td>${fieldValue(bean: matchInstance, field: "date")}</td>
-					
+						
 						<td>${fieldValue(bean: matchInstance, field: "home")}</td>
+						
+						<td>${fieldValue(bean: matchInstance, field: "away")}</td>
 					
 						<td>${fieldValue(bean: matchInstance, field: "place")}</td>
 					

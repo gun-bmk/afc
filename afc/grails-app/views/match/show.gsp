@@ -23,42 +23,22 @@
 			</g:if>
 			<ol class="property-list match">
 			
-				<g:if test="${matchInstance?.away}">
-				<li class="fieldcontain">
-					<span id="away-label" class="property-label"><g:message code="match.away.label" default="Away" /></span>
-					
-						<span class="property-value" aria-labelledby="away-label"><g:link controller="team" action="show" id="${matchInstance?.away?.id}">${matchInstance?.away?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${matchInstance?.commentators}">
-				<li class="fieldcontain">
-					<span id="commentators-label" class="property-label"><g:message code="match.commentators.label" default="Commentators" /></span>
-					
-						<g:each in="${matchInstance.commentators}" var="c">
-						<span class="property-value" aria-labelledby="commentators-label"><g:link controller="matchCommentator" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${matchInstance?.comments}">
-				<li class="fieldcontain">
-					<span id="comments-label" class="property-label"><g:message code="match.comments.label" default="Comments" /></span>
-					
-						<g:each in="${matchInstance.comments}" var="c">
-						<span class="property-value" aria-labelledby="comments-label"><g:link controller="comment" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${matchInstance?.date}">
 				<li class="fieldcontain">
 					<span id="date-label" class="property-label"><g:message code="match.date.label" default="Date" /></span>
 					
 						<span class="property-value" aria-labelledby="date-label"><g:fieldValue bean="${matchInstance}" field="date"/></span>
+					
+				</li>
+				</g:if>
+				
+				<g:if test="${matchInstance?.commentators}">
+				<li class="fieldcontain">
+					<span id="commentators-label" class="property-label"><g:message code="match.commentators.label" default="Commentators" /></span>
+					
+						<g:each in="${matchInstance.commentators}" var="c">
+						<span class="property-value" aria-labelledby="commentators-label"><g:link controller="commentator" action="show" id="${c.commentator.id}">${c?.commentator}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
@@ -71,12 +51,32 @@
 					
 				</li>
 				</g:if>
+				
+				<g:if test="${matchInstance?.away}">
+				<li class="fieldcontain">
+					<span id="away-label" class="property-label"><g:message code="match.away.label" default="Away" /></span>
+					
+						<span class="property-value" aria-labelledby="away-label"><g:link controller="team" action="show" id="${matchInstance?.away?.id}">${matchInstance?.away?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
 			
 				<g:if test="${matchInstance?.place}">
 				<li class="fieldcontain">
 					<span id="place-label" class="property-label"><g:message code="match.place.label" default="Place" /></span>
 					
 						<span class="property-value" aria-labelledby="place-label"><g:fieldValue bean="${matchInstance}" field="place"/></span>
+					
+				</li>
+				</g:if>
+				
+				<g:if test="${matchInstance?.comments}">
+				<li class="fieldcontain">
+					<span id="comments-label" class="property-label"><g:message code="match.comments.label" default="Comments" /></span>
+					
+						<g:each in="${matchInstance.comments}" var="c">
+						<span class="property-value" aria-labelledby="comments-label"><g:link controller="comment" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

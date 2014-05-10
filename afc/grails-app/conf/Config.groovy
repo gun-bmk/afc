@@ -92,6 +92,7 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+		afc.fileStorage = "/Users/karan/afc_storage"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -123,3 +124,5 @@ log4j = {
 grails.gorm.default.constraints = {
 	'*'(nullable: true)
 }
+
+grails.databinding.useSpringBinder=true

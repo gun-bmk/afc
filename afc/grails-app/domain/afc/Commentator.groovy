@@ -4,7 +4,7 @@ class Commentator {
 
 	String name
 	String email
-	byte[] image
+	byte[]  image
 	
 	static hasMany = [matchs: MatchCommentator]
 	
@@ -14,7 +14,12 @@ class Commentator {
 	static	constraints = {
 		name blank: false
 		email nullable: true
-		image nullable: true, size: 0..819200
+		image size: 1..10*1024*1024
     }
+	
+	@Override	// Override toString for a nicer / more descriptive UI
+	public String toString() {
+		return "${name }";
+	}
 	
 }

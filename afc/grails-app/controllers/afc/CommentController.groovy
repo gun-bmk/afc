@@ -105,16 +105,13 @@ class CommentController {
     }
 	
 	def showByMatch(Long id) {
-		
 		def match = Match.get(id)
 		def matchCommentator = MatchCommentator.findAllByMatch(match)
 		[match: match, comments: Comment.findAllByMatch(match), commentators: matchCommentator.commentator]
 	}
 	
 	def addComment(Long matchId, String comment, String authorName) {
-		println params
 		if (matchId != null && comment != null & authorName != null) {
-			println "ldsfkjldskjfkdsjf"
 			def match = Match.get(matchId)
 			def commentInstance = new Comment(comment: comment, authorName: authorName, timeStamp: new LocalDateTime(), match: match)
 			commentInstance.save flush: true

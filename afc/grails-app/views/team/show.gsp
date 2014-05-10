@@ -36,6 +36,7 @@
 				<li class="fieldcontain">
 					<span id="logo-label" class="property-label"><g:message code="team.logo.label" default="Logo" /></span>
 					
+					<span class="property-value" aria-labelledby="logo-label"><g:domainImage bean="${teamInstance}" name="logo"/></span>
 				</li>
 				</g:if>
 			
