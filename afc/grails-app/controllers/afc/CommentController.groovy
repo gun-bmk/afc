@@ -101,4 +101,12 @@ class CommentController {
             '*'{ render status: NOT_FOUND }
         }
     }
+	
+	def showByMatch(Long matchId) {
+		
+		def match = Match.get(matchId)
+		def matchCommentator = MatchCommentator.findAllByMatch(match)
+		println matchCommentator
+		[match: match, comments: Comment.findAllByMatch(match), commentators: matchCommentator.commentator]
+	}
 }
