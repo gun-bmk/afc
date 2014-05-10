@@ -11,7 +11,7 @@
     <title>Match Detail</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="${resource(dir: 'js', file: 'bootstrap.min.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'css', file: 'bootstrap.min.css')}" rel="stylesheet">
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="${resource(dir: 'js', file: 'jquery.min.js')}"></script>
@@ -67,6 +67,19 @@
     <div id="comment_container">
       
       <div class="comment_wrapper" style="margin-bottom:30px;">
+      <g:each in="${comments}" var="comment">
+         <table width="100%" border="0">
+          <tr>
+            <td colspan="2" >${comment.authorName}</td>
+            <td width="68%" rowspan="2" bgcolor="#99FFFF">${comment.comment}</td>
+          </tr>
+          <tr>
+            <td width="5%"><img src="http://www.employmentlawebuzz.com/files/2013/10/main-thumb-t-8762-50-xjPOswuVFn5ZplI8yJx4s1Zii1rnCXiS.jpeg" width="30px"></td>
+            <td width="10%">${comment.likeCount}</td>
+          </tr>
+        </table>
+        <br />
+      </g:each>
         
         <table width="100%" border="0">
           <tr>

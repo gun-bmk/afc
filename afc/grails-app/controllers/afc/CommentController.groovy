@@ -102,11 +102,24 @@ class CommentController {
         }
     }
 	
-	def showByMatch(Long matchId) {
+	def showByMatch(id) {
 		
-		def match = Match.get(matchId)
+		def match = Match.get(id)
 		def matchCommentator = MatchCommentator.findAllByMatch(match)
-		println matchCommentator
 		[match: match, comments: Comment.findAllByMatch(match), commentators: matchCommentator.commentator]
+	}
+	
+	def addComment(String, matchId, Comment commentInstance) {
+		if (!commentInstance) {
+			return
+		}
+	}
+	
+	def like(Long commentId) {
+		def commentInstance = Comment.get(commentId)
+		if (commentInstance) {
+			commentInstance.likeCount++
+			commentInstance.save flush: true
+		}
 	}
 }
