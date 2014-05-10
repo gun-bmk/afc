@@ -5,6 +5,8 @@ package afc
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
+import org.joda.time.LocalDateTime
+
 @Transactional(readOnly = true)
 class CommentController {
 
@@ -106,5 +108,23 @@ class CommentController {
 		def match = Match.get(id)
 		def matchCommentator = MatchCommentator.findAllByMatch(match)
 		[match: match, comments: Comment.findAllByMatch(match), commentators: matchCommentator.commentator]
+	}
+	
+	def addComment(Long matchId, String comment, String authorName) {
+		if (matchId != null && comment != null & authorName != null) {
+			def match = Match.get(matchId)
+			def commentInstance = new Comment(comment: comment, authorName: authorName, timeStamp: new LocalDateTime(), match: match)
+			commentInstance.save flush: true
+		}
+		redirect(action: "showByMatch", params: [id: matchId])
+	}
+	
+	def like(Long id) {
+		def commentInstance = Comment.get(id)
+		if (commentInstance) {
+			commentInstance.likeCount++
+			commentInstance.save flush: true
+			redirect(action: "showByMatch", params: [id: id])
+		}
 	}
 }
