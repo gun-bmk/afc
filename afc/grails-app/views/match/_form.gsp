@@ -6,8 +6,7 @@
 		<g:message code="match.date.label" default="Date" />
 		
 	</label>
-	<g:datePicker name="date" value="${matchInstance?.date}"
-              default="${new Date()}"/>
+	<joda:dateTimePicker name="date" value="${matchInstance?.date ?: new org.joda.time.LocalDateTime()}"/>
 
 </div>
 

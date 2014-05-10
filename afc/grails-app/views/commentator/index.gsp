@@ -38,7 +38,7 @@
 					
 						<td><g:link action="show" id="${commentatorInstance.id}">${fieldValue(bean: commentatorInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: commentatorInstance, field: "image")}</td>
+						<td><g:domainImage bean="${commentatorInstance}" name="image"/></td>
 					
 						<td>${fieldValue(bean: commentatorInstance, field: "email")}</td>
 					

@@ -37,7 +37,7 @@
 					<span id="commentators-label" class="property-label"><g:message code="match.commentators.label" default="Commentators" /></span>
 					
 						<g:each in="${matchInstance.commentators}" var="c">
-						<span class="property-value" aria-labelledby="commentators-label"><g:link controller="matchCommentator" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="commentators-label"><g:link controller="commentator" action="show" id="${c.commentator.id}">${c?.commentator}</g:link></span>
 						</g:each>
 					
 				</li>

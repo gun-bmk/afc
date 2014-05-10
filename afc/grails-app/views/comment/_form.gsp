@@ -41,7 +41,7 @@
 <div class="fieldcontain ${hasErrors(bean: commentInstance, field: 'timeStamp', 'error')} ">
 	<label for="timeStamp">
 		<g:message code="comment.timeStamp.label" default="Time Stamp" />
-		
+		<joda:dateTimePicker name="timeStamp" value="${commentInstance?.timeStamp ?: new org.joda.time.LocalDateTime()}"/>
 	</label>
 	
 

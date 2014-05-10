@@ -24,7 +24,7 @@ fixture{
 	cm2(Commentator, name:"ธีรยุทธ์ บันหนองสา", email:"cteerayut.b@gmail.com" )
 	cm3(Commentator, name:"โยธิน อารีย์การเลิศ", email:"cyothin.a@gmail.com" )
 	cm4(Commentator, name:"วีรศักดิ์ นิลกลัด", email:"cweerasak.n@gmail.com" )
-	cm5(Commentator, name:"สาธิต กรีกุล", email:"csathit.k@gmail.com")
+	cm5(Commentator, name:"สาธิต กรีกุล", email:"csathit.k@gmail.com", image: new File("fixtures/satit.jpg").bytes)
 	cm6(Commentator, name:"กิตติกร อุดมผล", email:"ckittikorn.a@gmail.com")
 	cm7(Commentator, name:"อภิสิทธิ์ อภิสุขสิริ", email:"capisit.a@gmail.com")
 	cm8(Commentator, name:"ยุทธชัย จิรขวัญฉาย", email:"cyuttachai.j@gmail.com")

@@ -38,7 +38,7 @@
 					
 						<td><g:link action="show" id="${teamInstance.id}">${fieldValue(bean: teamInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: teamInstance, field: "logo")}</td>
+						<td><g:domainImage bean="${teamInstance}" name="logo"/></td>
 					
 						<td>${fieldValue(bean: teamInstance, field: "shortName")}</td>
 					

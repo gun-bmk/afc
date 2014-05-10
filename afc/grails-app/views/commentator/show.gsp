@@ -32,30 +32,17 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${commentatorInstance?.image}">
 				<li class="fieldcontain">
 					<span id="image-label" class="property-label"><g:message code="commentator.image.label" default="Image" /></span>
+					<span class="property-value" aria-labelledby="image-label"><g:domainImage bean="${commentatorInstance}" name="image"/></span>
 					
 				</li>
-				</g:if>
 			
 				<g:if test="${commentatorInstance?.email}">
 				<li class="fieldcontain">
 					<span id="email-label" class="property-label"><g:message code="commentator.email.label" default="Email" /></span>
 					
 						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${commentatorInstance}" field="email"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${commentatorInstance?.matchs}">
-				<li class="fieldcontain">
-					<span id="matchs-label" class="property-label"><g:message code="commentator.matchs.label" default="Matchs" /></span>
-					
-						<g:each in="${commentatorInstance.matchs}" var="m">
-						<span class="property-value" aria-labelledby="matchs-label">
-						<g:link controller="match" action="show" id="${m.id}">${m}</g:link></span>
-						</g:each>
 					
 				</li>
 				</g:if>
