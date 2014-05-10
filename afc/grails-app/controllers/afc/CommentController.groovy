@@ -102,11 +102,9 @@ class CommentController {
         }
     }
 	
-	def showByMatch(Long matchId) {
-		
-		def match = Match.get(matchId)
+	def showByMatch(Long id) {
+		def match = Match.get(id)
 		def matchCommentator = MatchCommentator.findAllByMatch(match)
-		println matchCommentator
 		[match: match, comments: Comment.findAllByMatch(match), commentators: matchCommentator.commentator]
 	}
 }
