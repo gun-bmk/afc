@@ -92,7 +92,7 @@ class CommentatorController {
         }
     }
 	
-	def loadImage(String domain, String name, Long id, Boolean thumbnail){
+	def loadImage(Long id, Boolean thumbnail){
 //		def data = backendService.makePictureFile(domain, id, name)
 //		if(thumbnail){
 //			def img =  ImageIO.read(data)
@@ -121,7 +121,7 @@ class CommentatorController {
 		
 		
 		
-		render(file: data, contentType: "image/jpeg")
+		render(file: Commentator.get(id).image, contentType: "image/jpeg")
 	}
 
     protected void notFound() {
