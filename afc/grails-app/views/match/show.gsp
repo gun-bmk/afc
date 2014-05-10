@@ -75,7 +75,7 @@
 					<span id="comments-label" class="property-label"><g:message code="match.comments.label" default="Comments" /></span>
 					
 						<g:each in="${matchInstance.comments}" var="c">
-						<span class="property-value" aria-labelledby="comments-label"><g:link controller="comment" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="comments-label">${c}</span>
 						</g:each>
 					
 				</li>

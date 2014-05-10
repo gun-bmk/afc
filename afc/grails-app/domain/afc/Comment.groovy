@@ -2,6 +2,7 @@ package afc
 
 import org.joda.time.LocalDateTime
 
+
 class Comment {
 
 	String comment
@@ -18,4 +19,9 @@ class Comment {
 	static	constraints = {
 		comment blank: false
     }
+	
+	@Override	// Override toString for a nicer / more descriptive UI
+	public String toString() {
+		return "${comment}";
+	}
 }

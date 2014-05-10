@@ -37,3 +37,18 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: matchInstance, field: 'commentators', 'error')} ">
+	<label for="place">
+		<g:message code="match.commentators.label" default="Commentators" />
+		
+	</label>
+	
+	<g:select name="commentators"
+          from="${afc.Commentator.list()}"
+          value="${matchInstance?.commentators?.commentator?.id}"
+          optionKey="id"
+          multiple="true" />
+	
+
+</div>
+
