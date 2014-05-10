@@ -101,4 +101,8 @@ class MatchController {
             '*'{ render status: NOT_FOUND }
         }
     }
+	
+	def list() {
+		[matchList: Match.list()]
+	}
 }
